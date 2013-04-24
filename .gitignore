@@ -46,3 +46,7 @@ Icon?
 ehthumbs.db
 Thumbs.db
 *.ipynb
+
+# settings #
+############
+local_settings.py
