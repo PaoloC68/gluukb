@@ -1,0 +1,15 @@
+<uwsgi>
+  	<socket>/tmp/gluukb.com.sock</socket>
+	<plugins>python26</plugins>
+    <chdir>/var/django/gluu_kb_env/gluukb/gluukb</chdir>
+	<pythonpath>/var/django/gluukb_env/gluukb</pythonpath>
+	<module>wsgi</module>
+  	<virtualenv>/var/django/gluukb_env</virtualenv>
+	<uid>uwsgi</uid>
+    <gid>uwsgi</gid>
+    <processes>1</processes>
+    <threads>1</threads>
+	<log_file>/var/log/uwsgi/gluukb.log</log_file>
+	<single-interpreter/>
+    <extra_options>--plugins python26</extra_options>
+</uwsgi>
