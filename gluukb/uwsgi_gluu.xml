@@ -1,7 +1,7 @@
 <uwsgi>
   	<socket>/tmp/gluukb.com.sock</socket>
 	<plugins>python26</plugins>
-    <chdir>/var/django/gluu_kb_env/gluukb/gluukb</chdir>
+    <chdir>/var/django/gluukb_env/gluukb/gluukb</chdir>
 	<pythonpath>/var/django/gluukb_env/gluukb</pythonpath>
 	<module>wsgi</module>
   	<virtualenv>/var/django/gluukb_env</virtualenv>
