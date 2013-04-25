@@ -124,8 +124,8 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
-ADMIN_HEADLINE = 'Gluu CRM'
-ADMIN_TITLE = 'Gluu CRM'
+GRAPPELLI_ADMIN_HEADLINE = 'Gluu CRM'
+GRAPPELLI_ADMIN_TITLE = 'Gluu CRM'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
