@@ -142,6 +142,22 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'knowledge',
     'sugarmodels',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.dropbox',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.linkedin',
+    'allauth.socialaccount.providers.openid',
+    'allauth.socialaccount.providers.persona',
+    'allauth.socialaccount.providers.soundcloud',
+    'allauth.socialaccount.providers.stackexchange',
+    'allauth.socialaccount.providers.twitch',
+    'allauth.socialaccount.providers.twitter',
+    'allauth.socialaccount.providers.vimeo',
+    'allauth.socialaccount.providers.weibo',
 
 )
 
