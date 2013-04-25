@@ -5,8 +5,8 @@
 	<pythonpath>/var/django/gluukb_env/gluukb</pythonpath>
 	<module>wsgi</module>
   	<virtualenv>/var/django/gluukb_env</virtualenv>
-	<uid>nginx</uid>
-    <gid>nginx</gid>
+	<uid>uwsgi</uid>
+    <gid>uwsgi</gid>
     <processes>1</processes>
     <threads>1</threads>
 	<log_file>/var/log/uwsgi/gluukb.log</log_file>
