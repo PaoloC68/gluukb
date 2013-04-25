@@ -1,5 +1,6 @@
 <uwsgi>
   	<socket>/tmp/gluukb.com.sock</socket>
+    <chmod-socket>666</chmod-socket>
 	<plugins>python26</plugins>
     <chdir>/var/django/gluukb_env/gluukb/gluukb</chdir>
 	<pythonpath>/var/django/gluukb_env/gluukb</pythonpath>
