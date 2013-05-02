@@ -228,7 +228,7 @@ class Contact(models.Model):
     portal_name = models.CharField(max_length=255L, blank=True)
     portal_active = models.IntegerField(editable=False, default=0)
     portal_app = models.CharField(max_length=255L, blank=True)
-    # campaign_id = models.CharField(max_length=36L, blank=True)
+    campaign_id = models.CharField(max_length=36L, blank=True)
     emails = models.ManyToManyField(
         'EmailAddress',
         through='EmailContact',
@@ -258,16 +258,17 @@ class ContactCase(models.Model):
 
 
 class ContactCstm(models.Model):
-    id_c = models.CharField(max_length=36L, primary_key=True)
-    linkedin_c = models.CharField(max_length=128L, blank=True)
-    twitter_c = models.CharField(max_length=64L, blank=True)
-    skype_c = models.CharField(max_length=64L, blank=True)
-    google_c = models.CharField(max_length=64L, blank=True)
-    contact_type_c = models.TextField(blank=True)
+    id_c = models.OneToOneField('Contact', parent_link=True, primary_key=True, related_name='custom')
+    #id_c = UUIDField(max_length=36L, primary_key=True)
+    linkedin_c = models.CharField(max_length=128L, blank=True, default='')
+    twitter_c = models.CharField(max_length=64L, blank=True, default='')
+    skype_c = models.CharField(max_length=64L, blank=True, default='')
+    google_c = models.CharField(max_length=64L, blank=True, default='')
+    contact_type_c = models.TextField(blank=True, default='')
     seen_demo_c = models.IntegerField(null=True, blank=True)
     demo_date_c = models.DateField(null=True, blank=True)
-    named_contact_c = models.IntegerField(null=True, blank=True)
-    billing_contact_c = models.IntegerField(null=True, blank=True)
+    named_contact_c = models.IntegerField(null=True, blank=True, default=0)
+    billing_contact_c = models.IntegerField(null=True, blank=True, default=0)
 
     class Meta:
         db_table = 'contacts_cstm'
