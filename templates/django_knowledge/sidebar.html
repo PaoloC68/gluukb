@@ -5,10 +5,11 @@
 
 <ul>
     {% if not user.is_active %}
-  <li><a href="{% url 'account_login' %}">{% trans "Login" %}</a></li>
+  <li><a href="{% url "socialauth_begin" "google-oauth2" %}">{% trans "Login Google" %}</a></li>
+        <li><a href="{% url "socialauth_begin" "gluu" %}">{% trans "Login Gluu" %}</a></li>
    {% else %}
-  <li><a href="{% url 'account_email' %}">{% trans "Change Email" %}</a></li>
-  <li><a href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
+        <li><a href="{% url "socialauth_disconnect" "google-oauth2" %}">{% trans "Disconnect Google" %}</a></li>
+        <li><a href="{% url "socialauth_disconnect" "gluu" %}">{% trans "Disconnect Gluu" %}</a></li>
     {% endif %}
 </ul>
 

@@ -111,12 +111,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-    'allauth.account.context_processors.account',
-    'allauth.socialaccount.context_processors.socialaccount',
+    'social_auth.context_processors.social_auth_by_type_backends',
 )
 AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.google.GoogleOAuth2Backend',
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
+
 )
 
 
@@ -142,14 +142,28 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
+# allauth settngs
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
-
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL          = '/login-form/'
+LOGIN_REDIRECT_URL = '/logged-in/'
+LOGIN_ERROR_URL    = '/login-error/'
+SOCIAL_AUTH_COMPLETE_URL_NAME  = 'socialauth_complete'
+SOCIAL_AUTH_ASSOCIATE_URL_NAME = 'socialauth_associate_complete'
 
+# Gappelli settngs
 GRAPPELLI_ADMIN_HEADLINE = 'Gluu CRM'
 GRAPPELLI_ADMIN_TITLE = 'Gluu CRM'
+
+GOOGLE_OAUTH2_CLIENT_ID      = '96802655573.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET  = 'hoGxwagu0qdjIyTqlwaIQewN'
+GLUU_OAUTH2_CLIENT_ID      = '@!1111!0008!B242.A0E1'
+GLUU_OAUTH2_CLIENT_SECRET  = 'secret'
+
+# email settngs
+
+EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -168,20 +182,21 @@ INSTALLED_APPS = (
     'django_extensions',
     'django.contrib.markup',
     'knowledge',
+    'djcelery',
+    'celerytest',
+    'djcelery_email',
     'sugarmodels',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.linkedin',
-    'allauth.socialaccount.providers.openid',
-    'allauth.socialaccount.providers.twitter',
+    'social_auth',
 
 
 )
 
+
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    'gluukb.gluu_oidc.GluuOAuth2Backend',
+    'django.contrib.auth.backends.ModelBackend',
+    )
 # from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 #
 
