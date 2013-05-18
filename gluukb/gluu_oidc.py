@@ -44,10 +44,10 @@ class GluuOAuth2Backend(OAuthBackend):
 
     def get_user_id(self, details, response):
         """Use google email or id as unique id"""
-        user_id = super(GluuOAuth2Backend, self).get_user_id(details,
-                                                               response)
+        user_id = response['email']
+
         if setting('GLUU_OAUTH2_USE_UNIQUE_USER_ID', False):
-            return response['id']
+            return response['id_token']
         return user_id
 
     def get_user_details(self, response):
