@@ -24,7 +24,10 @@ body {
 img.logo, h1.title {
     display: none;
 }
+.dk-inner {
+margin: 20px;
 
+}
 .content {
     width: 1000px !important;
     margin: 0px auto;
