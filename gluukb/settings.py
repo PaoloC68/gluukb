@@ -161,7 +161,16 @@ GLUU_OAUTH2_CLIENT_SECRET  = 'secret'
 
 # email settngs
 
-EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
+
+EMAIL_HOST_USER = "support@gluu.org"
+EMAIL_HOST_PASSWORD = ""
+
+EMAIL_HOST = 'mail.gluu.org'
+
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -191,7 +200,7 @@ INSTALLED_APPS = (
 
 
 AUTHENTICATION_BACKENDS = (
-    'social_auth.backends.google.GoogleOAuth2Backend',
+    #'social_auth.backends.google.GoogleOAuth2Backend',
     'gluukb.gluu_oidc.GluuOAuth2Backend',
     'django.contrib.auth.backends.ModelBackend',
     )
@@ -216,6 +225,8 @@ os.environ['HTTPS'] = "on"
 
 KNOWLEDGE_ALLOW_ANONYMOUS = False
 KNOWLEDGE_FREE_RESPONSE = False
+KNOWLEDGE_FREE_RESPONSE = True
+KNOWLEDGE_ALERTS = False
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

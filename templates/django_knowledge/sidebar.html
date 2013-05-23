@@ -4,8 +4,10 @@
 <hr />
 <ul style="list-style: none; ">
     {% if not user.is_active %}
-        <li><a href="{% url "socialauth_begin" "gluu" %}"><img src="{{ STATIC_URL }}img/logo_ox_oidc.png"/></a></li>
-  <li><a href="{% url "socialauth_begin" "google-oauth2" %}"><img src="{{ STATIC_URL }}img/logo_gplus_oidc.png"></a></li>
+        <li><a href="{% url "socialauth_begin" "gluu" %}?next={{ request.path }}"><img src="{{ STATIC_URL }}img/logo_ox_oidc.png"/></a></li>
+        {% comment %}
+        <li><a href="{% url "socialauth_begin" "google-oauth2" %}?next={{ request.path }}"><img src="{{ STATIC_URL }}img/logo_gplus_oidc.png"></a></li>
+        {% endcomment %}
 
    {% else %}
         <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>

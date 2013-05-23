@@ -258,7 +258,7 @@ class ContactCase(models.Model):
 
 
 class ContactCstm(models.Model):
-    id_c = models.OneToOneField('Contact', parent_link=True, primary_key=True, related_name='custom')
+    contact = models.OneToOneField(Contact, primary_key=True, db_column='id_c', related_name='custom')
     #id_c = UUIDField(max_length=36L, primary_key=True)
     linkedin_c = models.CharField(max_length=128L, blank=True, default='')
     twitter_c = models.CharField(max_length=64L, blank=True, default='')

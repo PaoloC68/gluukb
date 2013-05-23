@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 __author__ = 'paolo'
 from django.contrib import admin
-from models import Account, Contact, AccountContact, Case, EmailAccount, EmailContact, EmailAddress, ContactCase
+from models import Account, Contact, AccountContact, Case, EmailAccount, EmailContact, EmailAddress, ContactCase, ContactCstm
 
+class ContactsAdminInline(admin.StackedInline):
+    model = Contact
+
+class ContactCstmAdmin(admin.ModelAdmin):
+    inlines = (ContactsAdminInline,)
 
 class AccountContactInline(admin.StackedInline):
     model = AccountContact
@@ -67,3 +72,4 @@ admin.site.register(Account, AccountsAdmin)
 admin.site.register(Contact, ContactsAdmin)
 admin.site.register(EmailAddress, EmailAddressesAdmin)
 admin.site.register(Case, CasesAdmin)
+admin.site.register(ContactCstm, ContactCstmAdmin)
