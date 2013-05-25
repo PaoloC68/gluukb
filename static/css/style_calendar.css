@@ -1,5 +1,5 @@
 body {
-    background: url(http://www.gluu.org/blog/wp-content/themes/gluursn-blog/images/basebg.gif) repeat;
+    background: url(../img/basebg.gif) repeat;
 }
 
 #header {
@@ -142,7 +142,7 @@ a:link, a:hover, a:active, a:visited {
     border-top: 1px solid #ddd;
     background: #b5b5b5;
     overflow: hidden;
-    background: url(http://www.gluu.org/blog/wp-content/themes/gluursn-blog/images/footerbg.png);
+    background: url(../img/footerbg.png);
     background-repeat: repeat-x;
 }
 
@@ -219,7 +219,7 @@ li.footer-col li {
     height: 20px;
     border: 0px solid black;
     margin: 0 auto;
-    background: url(http://www.gluu.org/blog/wp-content/themes/gluursn-blog/images/footer_separator_bg.png);
+    background: url(../img/footer_separator_bg.png);
     background-repeat: no-repeat;
     background-position: center top;
     margin-top: 22px;
