@@ -12,7 +12,7 @@ from social_auth.backends import OpenIdAuth, ConsumerBasedOAuth, BaseOAuth2, \
                                  OAuthBackend, OpenIDBackend
 from social_auth.exceptions import AuthFailed
 GLUU_OAUTH2_SERVER = 'seed.gluu.org'
-GLUU_OATUH2_AUTHORIZATION_URL = 'https://accounts.google.com/o/oauth2/auth'
+
 GLUU_OAUTH2_SCOPE = ['openid',
                        'email']
 GLUUAPIS_PROFILE = 'https://seed.gluu.org/oxauth/seam/resource/restv1/oxauth/userinfo'
