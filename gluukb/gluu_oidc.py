@@ -15,7 +15,7 @@ GLUU_OAUTH2_SERVER = 'seed.gluu.org'
 
 GLUU_OAUTH2_SCOPE = ['openid',
                        'email']
-GLUUAPIS_PROFILE = 'https://seed.gluu.org/oxauth/seam/resource/restv1/oxauth/userinfo'
+GLUUAPIS_PROFILE = 'https://idp.gluu.org/oxauth/seam/resource/restv1/oxauth/userinfo'
 GLUUAPIS_EMAIL = 'email'
 
 
@@ -65,8 +65,8 @@ _OAUTH2_KEY_NAME = setting('GLUU_OAUTH2_CLIENT_ID') and \
 class GluuOAuth2(BaseOAuth2):
     """Gluu OAuth2 support"""
     AUTH_BACKEND = GluuOAuth2Backend
-    AUTHORIZATION_URL = 'https://seed.gluu.org/oxauth/seam/resource/restv1/oxauth/authorize'
-    ACCESS_TOKEN_URL = 'https://seed.gluu.org/oxauth/seam/resource/restv1/oxauth/token'
+    AUTHORIZATION_URL = 'https://idp.gluu.org/oxauth/seam/resource/restv1/oxauth/authorize'
+    ACCESS_TOKEN_URL = 'https://idp.gluu.org/oxauth/seam/resource/restv1/oxauth/token'
     SETTINGS_KEY_NAME = _OAUTH2_KEY_NAME
     SETTINGS_SECRET_NAME = 'GLUU_OAUTH2_CLIENT_SECRET'
     SCOPE_VAR_NAME = 'GLUU_OAUTH_EXTRA_SCOPE'
