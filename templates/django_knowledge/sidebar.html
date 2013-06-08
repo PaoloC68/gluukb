@@ -5,7 +5,7 @@
 <ul style="list-style: none; ">
     {% if not user.is_active %}
         <li><a href="{% url "socialauth_begin" "gluu" %}?next={{ request.path }}"><img src="{{ STATIC_URL }}img/logo_ox_oidc.png"/></a></li>
-        <li><a href="http://seed.gluu.org/oxTrust/register">Registration </a></li>
+        <li><a href="https://idp.gluu.org/identity/register">Registration </a></li>
         {% comment %}
         <li><a href="{% url "socialauth_begin" "google-oauth2" %}?next={{ request.path }}"><img src="{{ STATIC_URL }}img/logo_gplus_oidc.png"></a></li>
         {% endcomment %}
