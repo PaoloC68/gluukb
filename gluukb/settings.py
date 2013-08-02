@@ -13,7 +13,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Your Name', 'support@gluu.org'),
 )
 
 MANAGERS = ADMINS
@@ -162,13 +162,7 @@ GLUU_OAUTH2_CLIENT_SECRET  = ''
 # email settngs
 
 
-EMAIL_HOST_USER = "support@gluu.org"
-EMAIL_HOST_PASSWORD = ""
-
-EMAIL_HOST = 'mail.gluu.org'
-
-EMAIL_PORT = 25
-EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'noreply@gluu.org'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
@@ -226,7 +220,7 @@ os.environ['HTTPS'] = "on"
 KNOWLEDGE_ALLOW_ANONYMOUS = False
 KNOWLEDGE_FREE_RESPONSE = False
 KNOWLEDGE_FREE_RESPONSE = True
-KNOWLEDGE_ALERTS = False
+KNOWLEDGE_ALERTS = True
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

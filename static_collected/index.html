@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>Gluu Support</title>
+<title>Untitled Document</title>
 <meta name='robots' content='noindex,nofollow' />
-<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.css" />
-<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/reset.css" />
-<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/overrides.css" />
-<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/style.css" />
-<link rel="stylesheet" href="{{ STATIC_URL }}knowledge/css/main.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-
+<link rel="stylesheet" type="text/css" media="all" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" media="all" href="bootstrap/css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/overrides.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    
 <script type="text/javascript">
 jQuery(document).ready(function($){
 
@@ -20,16 +19,16 @@ jQuery(document).ready(function($){
 	$('#menu-main_nav li:last-child').addClass('schedule-btn-wrapper');
 	$('.schedule-btn-wrapper a').addClass('schedule-button orange');
 	$('.schedule-btn-wrapper a').append('<span class="sprite-orange_click_icon"></span>');
-
+	
 		if ($('.widget_latest_tweets_widget').length > 0) {
 		$('.widget_latest_tweets_widget').append('<a class="twitter-follow-link" href="https://twitter.com/GluuFederation">Follow Us</a>');
 	}
-
+	
 	if ($('.recent-posts-extended').length > 0) {
 		$('.recent-posts-extended').append('<a class="view-all-link" href="http://www.gluu.org/resources/press-releases/">View All</a>');
 	}
-
-
+	
+	
 });
 </script>
 </head>
@@ -38,7 +37,7 @@ jQuery(document).ready(function($){
 <div class="top-bar">
 <div class="container">
 	<header class="row-fluid">
-		<div class="span2 logo"><a href="http://www.gluu.org/"><img src="{{ STATIC_URL }}images/logo.png" alt="gluu logo" /></a></div>
+		<div class="span2 logo"><a href="http://www.gluu.org/"><img src="images/logo.png" alt="gluu logo" /></a></div>
 		<nav class="span10 main-nav-wrapper">
 			<ul id="menu-main_nav" class="main-nav">
 				<li><a href="http://www.gluu.org/open-source/open-source-vs-on-demand/">Open Source</a></li>
@@ -57,7 +56,7 @@ jQuery(document).ready(function($){
 
 <section class="services page-services">
 
-<div class="services-description-wrapper">
+<div class="services-description-wrapper">	
 	<div class="container">
 		<div class="row-fluid">
 			<div id="info" class="span12">
@@ -73,10 +72,26 @@ jQuery(document).ready(function($){
 </section>
 
 <div class="container main">
-
-        {% block knowledge_inner %}
-        {% endblock knowledge_inner %}
-
+	<div class="row-fluid">
+		<div class="span9">
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+		</div>
+		<div class="span3 right-side-nav">
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+		</div>
+	</div>
 </div>
 
 <footer class="container footer-container">
@@ -89,13 +104,13 @@ jQuery(document).ready(function($){
 				<li><a href="http://www.gluu.org/blog/">Blog</a></li>
 			</ul>
 			<ul class="social-links">
-				<li><a href="https://twitter.com/GluuFederation"><img src="{{ STATIC_URL }}images/social_twitter.png" alt="twitter" /></a></li>
-				<li><a href="http://youtube.com/gluufederation"><img src="{{ STATIC_URL }}images/social_you_tube.png" alt="you-tube" /></a></li>
-				<li><a href="http://www.linkedin.com/company/gluu-inc."><img src="{{ STATIC_URL }}images/social_linked_in.png" alt="linked-in" /></a></li>
-				<li><a href="http://www.slideshare.net/gluu"><img src="{{ STATIC_URL }}images/social_slideshare.png" alt="Slideshare" /></a></li>
+				<li><a href="https://twitter.com/GluuFederation"><img src="images/social_twitter.png" alt="twitter" /></a></li>
+				<li><a href="http://youtube.com/gluufederation"><img src="images/social_you_tube.png" alt="you-tube" /></a></li>
+				<li><a href="http://www.linkedin.com/company/gluu-inc."><img src="images/social_linked_in.png" alt="linked-in" /></a></li>
+				<li><a href="http://www.slideshare.net/gluu"><img src="images/social_slideshare.png" alt="Slideshare" /></a></li>
 			</ul>
 		</div>
-
+		
 		<aside class="recent-posts-extended span3">
 			<div class="widget-title">Press Releases</div>
 			<ul class="press-releases-widget">
@@ -107,14 +122,14 @@ jQuery(document).ready(function($){
 				</li>
 			</ul>
 		</aside>
-
+		
 		<aside class="widget_latest_tweets_widget span3">
 			<div class="widget-title">Recent Tweets</div>
 			<ul class="tweets-widget">
 			<li><p class="tweet-text">10 ppl have now contributed to the <a href="#">#ApacheUMA</a> crowdtilt campaign!! Are you ready to join the movement?! <a href="#">www.gluu.co/uma-apache</a></p></li>
 			<li><p class="tweet-text">23 days left to contribute to the <a href="#">#ApacheUMA</a> Crowdtilt.. get your name on the code by donating today! <a href="#">#ThisIsHistory! www.gluu.co/uma-apache</a></p></li>
 			</ul>
-		</aside>
+		</aside>	
 		<div class="span3 question-container">
 			<h4>Questions?</h4>
 			<strong>(877) 464-6972</strong>
@@ -133,7 +148,7 @@ jQuery(document).ready(function($){
 </footer>
 
 
-<script src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 
