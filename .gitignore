@@ -53,5 +53,5 @@ local_settings.py
 
 # static #
 ############
-.static_collected/
+static_collected
 requirements_new.txt
