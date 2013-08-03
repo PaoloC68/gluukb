@@ -7,8 +7,6 @@
 {% block knowledge_widgets %}
 
 <div class="dk-widget">
-  <h3>{% blocktrans with count=questions|length %}Top {{ count }} Questions{% endblocktrans %}</h3>
-  <hr />
 
   {% include 'django_knowledge/question_list.html' %}
 </div>
