@@ -1,0 +1,150 @@
+$experimental-support-for-mozilla: true;
+$experimental-support-for-webkit: true;
+$support-for-original-webkit-gradients: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+$experimental-support-for-svg: true;
+
+@import "compass";
+@import "compass/utilities";
+@import "compass/css3";
+@import "sprite/*.png";
+@include all-sprite-sprites;
+
+//variables
+$blue-link : #115b87;
+$gray-link : #666;
+$gray2-link : #525252;
+$gray_bg : #f9f8f8;
+$gray2_bg : #f2f2f2;
+$gray_border : #e3e0e0;
+
+//my mixins
+@mixin framed_container($color_bg, $color_border){
+	background-color:$color_bg; 
+	border:solid 1px $color_border;
+}
+
+@mixin inner_framed_container($paddingVar, $color_border){
+	padding:$paddingVar; 
+	border:1px solid $color_border;
+}
+
+//other
+.services-nav-wrapper a{
+	@include box-shadow(black 0px 0px 4px);
+}
+.services-description-wrapper{
+	
+}
+.banner-content-inner h3{
+@include text-shadow(rgba(black, 0.2) 1px 1px 0, rgba(black, 0.2) 1px 1px 0, rgba(black, 0.1) 1px 3px 0); 
+}
+
+.question-list, .search_list{
+	@include pretty-bullets("search-list-icon.png");
+}
+.search-results .question-list{
+	@include pretty-bullets("question_bullet.png");
+}
+.question-list li, .search_list li, .search-results .question-list li{padding-left:25px;}
+.dk-sidebar ul{
+	@include pretty-bullets("grays_bullit.png");
+}
+.dk-sidebar li{padding-left:21px !important;}
+
+.dk-sidebar a, .search_list a, .question-list a, .center-inner a{
+	&:link{color:$blue-link};
+	&:hover{text-decoration:underline};
+	@include link-colors($blue-link, $blue-link, $blue-link, $blue-link);
+}
+
+.search-results .question-list a{
+	&:link{color:$gray-link};
+	&:hover{text-decoration:underline};
+	@include link-colors($gray-link, $gray-link, $gray-link, $gray-link);
+}
+
+.question-search{
+	@include background(image-url("search-icon.png") no-repeat 8px 10px);
+}
+
+.submit-question-search{
+	@include border-radius(3px);
+	@include background(image-url("magnifying_glass.png") no-repeat 71px 10px,(linear-gradient(#21c87a, #1ab26b)));
+	@include box-shadow(rgba(43, 43, 43, 0.4) 1px 2px 2px); 
+	border:1px solid #12a35f;
+	color:#fff;
+	padding:13px 38px 13px 13px;
+	text-transform:uppercase;
+	font-size:12px !important;
+	@include transition(all .1s ease-in-out);
+	&:hover{
+		@include background(image-url("magnifying_glass.png") no-repeat 71px 10px,(linear-gradient(#21c87a, #17995c)));
+	}
+	&:active{
+		@include background(image-url("magnifying_glass.png") no-repeat 71px 10px,(linear-gradient(#17995c, #21c87a)));
+	}
+}
+
+.search-results, .dk-search{
+	@include framed_container($gray_bg, $gray_border);
+	@include border-radius(5px);
+}
+.center{
+	@include framed_container($gray2_bg, $gray_border);
+	@include border-radius(5px);
+}
+
+.search-results .span12, .dk-search form{
+	@include inner_framed_container(40px 0px 40px 40px, white);
+	@include border-radius(5px);
+}
+.center{
+	max-width:330px;
+	margin:77px auto 0 auto;
+}
+.center-inner{
+	@include inner_framed_container(22px 25px 18px 24px, white);
+	@include border-radius(5px);
+	text-align:center;
+}
+.center-inner p, .center-inner a{
+	font-size:14px;
+}
+.center-inner p{
+	margin-bottom:16px;
+}
+.dk-widget h3 em{
+	font-size:22px;
+}
+
+#multiColumn h4{
+	line-height:1em;
+	border-bottom:1px solid #ccc;
+	margin:0 !important;
+	padding-top:61px;
+	padding-bottom:13px;
+	overflow:hidden;
+	font-size:22px;
+	color:$gray2-link;
+}
+
+#multiColumn h4 a{
+	&:hover{text-decoration:underline};
+	@include link-colors($gray2-link, $gray2-link, $gray2-link, $gray2-link);
+	font-size:22px;
+}
+
+.gt-icon{
+	@include inline-block;
+	width:12px;
+	height:18px;
+	@include sprite-sprite(double_gt);
+	background-repeat:no-repeat;
+	margin-left:7px;
+	margin-top:-4px;	
+}
+
+

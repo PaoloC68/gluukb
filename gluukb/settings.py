@@ -188,6 +188,7 @@ INSTALLED_APPS = (
     'djcelery_email',
     'sugarmodels',
     'social_auth',
+    'gluukb'
 
 
 )
