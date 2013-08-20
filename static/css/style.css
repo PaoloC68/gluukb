@@ -201,11 +201,45 @@
   color: #666666;
 }
 
-.question-search {
-  background: url('../images/search-icon.png?1375771028') no-repeat 8px 10px;
+.dk-inner {
+  padding: 0;
 }
-
-.submit-question-search {
+.dk-inner .dk-search {
+  background-color: #f9f8f8;
+  border: solid 1px #e3e0e0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 24px;
+}
+.dk-inner .dk-search form {
+  padding: 40px 0px 40px 40px;
+  border: 1px solid white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.dk-inner .dk-search form input.question-search {
+  background: url('../images/search-icon.png?1375771028') no-repeat 8px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding-left: 4px 4px 4px 35px;
+  height: 29px !important;
+  width: 80%;
+  float: left;
+  margin-right: 11px;
+  font-size: 12px;
+  color: #666;
+}
+.dk-inner .dk-search form .submit-question-search {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -224,13 +258,16 @@
   color: #fff;
   padding: 13px 38px 13px 13px;
   text-transform: uppercase;
-  font-size: 12px !important;
+  font-size: 12px;
+  text-shadow: none;
+  float: none;
+  height: 100%;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-.submit-question-search:hover {
+.dk-inner .dk-search form .submit-question-search:hover {
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxYzg3YSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE3OTk1YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #21c87a), color-stop(100%, #17995c));
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, -webkit-linear-gradient(#21c87a, #17995c);
@@ -238,7 +275,7 @@
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, -o-linear-gradient(#21c87a, #17995c);
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, linear-gradient(#21c87a, #17995c);
 }
-.submit-question-search:active {
+.dk-inner .dk-search form .submit-question-search:active {
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3OTk1YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxYzg3YSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #17995c), color-stop(100%, #21c87a));
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, -webkit-linear-gradient(#17995c, #21c87a);
@@ -246,8 +283,14 @@
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, -o-linear-gradient(#17995c, #21c87a);
   background: url('../images/magnifying_glass.png?1375808004') no-repeat 71px 10px, linear-gradient(#17995c, #21c87a);
 }
+.dk-inner .dk-content .dk-widget {
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 
-.search-results, .dk-search {
+.search-results {
   background-color: #f9f8f8;
   border: solid 1px #e3e0e0;
   -webkit-border-radius: 5px;
@@ -267,7 +310,7 @@
   border-radius: 5px;
 }
 
-.search-results .span12, .dk-search form {
+.search-results .span12 {
   padding: 40px 0px 40px 40px;
   border: 1px solid white;
   -webkit-border-radius: 5px;
@@ -305,9 +348,9 @@
   font-size: 22px;
 }
 
-#multiColumn h4 {
+#multiColumn h4, .dk-widget h3 {
   line-height: 1em;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
   margin: 0 !important;
   padding-top: 61px;
   padding-bottom: 13px;
@@ -316,20 +359,20 @@
   color: #525252;
 }
 
-#multiColumn h4 a {
+#multiColumn h4 a, .dk-widget h3 a {
   color: #525252;
   font-size: 22px;
 }
-#multiColumn h4 a:hover {
+#multiColumn h4 a:hover, .dk-widget h3 a:hover {
   text-decoration: underline;
 }
-#multiColumn h4 a:visited {
+#multiColumn h4 a:visited, .dk-widget h3 a:visited {
   color: #525252;
 }
-#multiColumn h4 a:hover {
+#multiColumn h4 a:hover, .dk-widget h3 a:hover {
   color: #525252;
 }
-#multiColumn h4 a:active {
+#multiColumn h4 a:active, .dk-widget h3 a:active {
   color: #525252;
 }
 
