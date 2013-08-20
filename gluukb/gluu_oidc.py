@@ -27,15 +27,6 @@ class GluuOAuth2Backend(OAuthBackend):
         """Use google email as unique id"""
         return details['email']
 
-    def get_user_details(self, response):
-        """Return user details from Orkut account"""
-        email = response.get('email', '')
-        return {'username': email.split('@', 1)[0],
-                'email': email,
-                'fullname': '',
-                'first_name': '',
-                'last_name': ''}
-
     EXTRA_DATA = [
         ('refresh_token', 'refresh_token', True),
         ('expires_in', 'expires'),

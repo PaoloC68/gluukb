@@ -158,6 +158,7 @@ GOOGLE_OAUTH2_CLIENT_ID      = '96802655573.apps.googleusercontent.com'
 GOOGLE_OAUTH2_CLIENT_SECRET  = 'hoGxwagu0qdjIyTqlwaIQewN'
 GLUU_OAUTH2_CLIENT_ID      = ''
 GLUU_OAUTH2_CLIENT_SECRET  = ''
+GLUU_OAUTH_EXTRA_SCOPE = ['profile', 'first_name', 'last_name', ]
 
 # email settngs
 
