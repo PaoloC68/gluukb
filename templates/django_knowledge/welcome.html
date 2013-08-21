@@ -1,5 +1,16 @@
 {% load i18n %}
-
+<div class="row-fluid">
+	<div class="span2 offset10">
+<ul style="list-style: none; ">
+    {% if not user.is_active %}
+        <li><a href="{% url "socialauth_begin" "gluu" %}?next={{ request.path }}">Sign In</a></li>
+        <li><a href="https://idp.gluu.org/identity/register">Register </a></li>
+   {% else %}
+        <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
+    {% endif %}
+</ul>
+	</div>
+</div>
 <div class="dk-roof">
   <h2 class="primary"><a href="{% url 'knowledge_index' %}">{% trans "Welcome to our Question and Answers Center." %}</a></h2>
   <h4>{% trans "Search for answers to your questions below, or ask your own." %}</h4>
