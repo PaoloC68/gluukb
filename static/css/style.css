@@ -290,6 +290,10 @@
   box-shadow: none;
 }
 
+.sign-in-up {
+  text-align: right;
+}
+
 .search-results {
   background-color: #f9f8f8;
   border: solid 1px #e3e0e0;
