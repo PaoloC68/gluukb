@@ -291,7 +291,33 @@
 }
 
 .sign-in-up {
-  text-align: right;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.sign-in-up li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.sign-in-up li:first-child, .sign-in-up li.first {
+  padding-left: 0;
+}
+.sign-in-up li:last-child {
+  padding-right: 0;
+}
+.sign-in-up li.last {
+  padding-right: 0;
+}
+.sign-in-up li {
+  padding-top: 20px;
 }
 
 .search-results {
