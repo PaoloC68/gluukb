@@ -64,14 +64,22 @@ jQuery(document).ready(function($){
 
 		</div>
 		</nav>
-		<ul class="span2 sign-in-up" style="list-style: none; ">
-    {% if not user.is_active %}
+		
+		<div class="span2 schedule-btn-wrapper">
+					
+							<div class="btn-group">
+								<a class="schedule-button green btn dropdown-toggle btn-success" data-toggle="dropdown" href="#">Sign In<span class="sprite-green_click_icon"></span></a>
+								<ul class="dropdown-menu">
+								    {% if not user.is_active %}
         <li><a href="{% url "socialauth_begin" "gluu" %}?next={{ request.path }}">Sign In</a></li>
         <li><a href="https://idp.gluu.org/identity/register">Register </a></li>
    {% else %}
         <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
     {% endif %}
-		</ul>
+								</ul>
+							</div>
+						
+				</div>
 	</header>
 <!-- end menu-->
 </div>
