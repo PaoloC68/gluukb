@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 <!-- begin menu-->
 	<header class="row-fluid" id="custom-nav">
 		<div class="hidden-phone hidden-tablet span2 logo"><a href="#"><img src="{{ STATIC_URL }}images/logo.png" alt="gluu logo" /></a></div>
-		<nav class="span10 main-nav-wrapper navbar navbar-inverse">
+		<nav class="span8 main-nav-wrapper navbar navbar-inverse">
 			<div class="navbar-inner">
 
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -64,6 +64,14 @@ jQuery(document).ready(function($){
 
 		</div>
 		</nav>
+		<ul class="span2 sign-in-up" style="list-style: none; ">
+    {% if not user.is_active %}
+        <li><a href="{% url "socialauth_begin" "gluu" %}?next={{ request.path }}">Sign In</a></li>
+        <li><a href="https://idp.gluu.org/identity/register">Register </a></li>
+   {% else %}
+        <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
+    {% endif %}
+		</ul>
 	</header>
 <!-- end menu-->
 </div>
