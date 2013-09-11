@@ -161,6 +161,7 @@ GLUU_OAUTH2_CLIENT_SECRET  = ''
 
 # email settngs
 
+BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
 EMAIL_HOST_USER = "support@gluu.org"
 EMAIL_HOST_PASSWORD = ""
@@ -170,7 +171,7 @@ EMAIL_HOST = 'mail.gluu.org'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
