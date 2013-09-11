@@ -226,7 +226,7 @@ os.environ['HTTPS'] = "on"
 KNOWLEDGE_ALLOW_ANONYMOUS = False
 KNOWLEDGE_FREE_RESPONSE = False
 KNOWLEDGE_FREE_RESPONSE = True
-KNOWLEDGE_ALERTS = False
+KNOWLEDGE_ALERTS = True
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
