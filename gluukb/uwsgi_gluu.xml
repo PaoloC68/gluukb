@@ -1,16 +1,16 @@
 <uwsgi>
-  	<socket>/tmp/gluukb.com.sock</socket>
+  	<socket>/tmp/gluukb_dev.com.sock</socket>
     <chmod-socket>666</chmod-socket>
 	<plugins>python26</plugins>
-    <chdir>/var/django/gluukb_env/gluukb/gluukb</chdir>
-	<pythonpath>/var/django/gluukb_env/gluukb</pythonpath>
+    <chdir>/var/django/gluukb_env_dev/gluukb/gluukb</chdir>
+	<pythonpath>/var/django/gluukb_env_dev/gluukb</pythonpath>
 	<module>wsgi</module>
-  	<virtualenv>/var/django/gluukb_env</virtualenv>
+  	<virtualenv>/var/django/gluukb_env_dev</virtualenv>
 	<uid>uwsgi</uid>
     <gid>uwsgi</gid>
     <processes>1</processes>
     <threads>1</threads>
-	<log_file>/var/log/uwsgi/gluukb.log</log_file>
+	<log_file>/var/log/uwsgi/gluukb_dev.log</log_file>
 	<single-interpreter/>
     <extra_options>--plugins python26</extra_options>
 </uwsgi>
