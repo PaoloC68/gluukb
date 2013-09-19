@@ -15,6 +15,7 @@
 media/cache/
 .idea/
 .scrapy/
+static_collected/
 
 # Packages #
 ############
